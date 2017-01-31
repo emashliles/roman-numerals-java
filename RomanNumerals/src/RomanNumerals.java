@@ -4,24 +4,18 @@ public class RomanNumerals {
 
         String roman = "";
 
-        if(i > 10) {
+        if(i > 10 || i == 10) {
             i -= 10;
             roman = "X";
         }
 
-        if(i == 10)
-            return "X";
-
         if(i == 9)
             return "IX";
 
-        if(i > 5) {
+        if(i > 5 || i == 5) {
             i -= 5;
             roman = "V";
         }
-
-        if(i == 5)
-            return "V";
 
         if(i == 4)
             return "IV";
