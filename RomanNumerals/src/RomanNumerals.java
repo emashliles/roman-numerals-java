@@ -9,16 +9,20 @@ public class RomanNumerals {
             roman = "X";
         }
 
-        if(arabic == 9)
-            return "IX";
+        if(arabic == 9) {
+            arabic -= 9;
+            roman += "IX";
+        }
 
         if(arabic > 5 || arabic == 5) {
             arabic -= 5;
             roman = "V";
         }
 
-        if(arabic == 4)
-            return "IV";
+        if(arabic == 4) {
+            arabic -= 4;
+            roman += "IV";
+        }
 
         if(arabic > 0 && arabic <= 3)
             roman = getOnes(arabic, roman);
