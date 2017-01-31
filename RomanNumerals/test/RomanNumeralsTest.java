@@ -33,4 +33,14 @@ class RomanNumeralsTest {
     void converts5() {
         assertEquals(RomanNumerals.convert(5), "V");
     }
+
+    @Test
+    void converts6() {
+        assertEquals(RomanNumerals.convert(6), "VI");
+    }
+
+    @Test
+    void converts7() {
+        assertEquals(RomanNumerals.convert(7), "VII");
+    }
 }
