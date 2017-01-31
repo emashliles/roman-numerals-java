@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class RomanNumeralsTest {
 
     @Test
-    public void converts0(){
+    void converts0(){
         assertEquals("", RomanNumerals.convert(0));
     }
 
@@ -17,5 +17,10 @@ class RomanNumeralsTest {
     @Test
     void converts2() {
         assertEquals(RomanNumerals.convert(2), "II");
+    }
+
+    @Test
+    void converts3() {
+        assertEquals(RomanNumerals.convert(3), "III");
     }
 }
