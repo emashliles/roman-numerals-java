@@ -1,6 +1,6 @@
 public class RomanNumerals {
 
-    public static String convert(int i) {
+    public String convert(int i) {
 
         String roman = "";
 
@@ -26,7 +26,7 @@ public class RomanNumerals {
         return roman;
     }
 
-    private static String getOnes(int i, String roman) {
+    private String getOnes(int i, String roman) {
         roman = roman + new String(new char[i]).replace("\0", "I");
         return roman;
     }

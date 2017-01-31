@@ -1,61 +1,69 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RomanNumeralsTest {
 
+    private RomanNumerals converter;
+
+    @BeforeEach
+    void setUp() {
+        converter = new RomanNumerals();
+    }
+
     @Test
     void converts0(){
-        assertEquals("", RomanNumerals.convert(0));
+        assertEquals("", converter.convert(0));
     }
 
     @Test
     void converts1() {
-        assertEquals(RomanNumerals.convert(1), "I");
+        assertEquals(converter.convert(1), "I");
     }
 
     @Test
     void converts2() {
-        assertEquals(RomanNumerals.convert(2), "II");
+        assertEquals(converter.convert(2), "II");
     }
 
     @Test
     void converts3() {
-        assertEquals(RomanNumerals.convert(3), "III");
+        assertEquals(converter.convert(3), "III");
     }
 
     @Test
     void converts4() {
-        assertEquals(RomanNumerals.convert(4), "IV");
+        assertEquals(converter.convert(4), "IV");
     }
 
     @Test
     void converts5() {
-        assertEquals(RomanNumerals.convert(5), "V");
+        assertEquals(converter.convert(5), "V");
     }
 
     @Test
     void converts6() {
-        assertEquals(RomanNumerals.convert(6), "VI");
+        assertEquals(converter.convert(6), "VI");
     }
 
     @Test
     void converts7() {
-        assertEquals(RomanNumerals.convert(7), "VII");
+        assertEquals(converter.convert(7), "VII");
     }
 
     @Test
     void converts9() {
-        assertEquals(RomanNumerals.convert(9), "IX");
+        assertEquals(converter.convert(9), "IX");
     }
 
     @Test
     void converts10() {
-        assertEquals(RomanNumerals.convert(10), "X");
+        assertEquals(converter.convert(10), "X");
     }
 
     @Test
     void converts11() {
-        assertEquals(RomanNumerals.convert(11), "XI");
+        assertEquals(converter.convert(11), "XI");
     }
 }
