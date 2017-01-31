@@ -66,4 +66,29 @@ class RomanNumeralsTest {
     void converts11() {
         assertEquals(converter.convert(11), "XI");
     }
+
+    @Test
+    void converts14() {
+        assertEquals(converter.convert(14), "XIV");
+    }
+
+    @Test
+    void converts40() {
+        assertEquals(converter.convert(40), "XL");
+    }
+
+    @Test
+    void converts44() {
+        assertEquals(converter.convert(44), "XLIV");
+    }
+
+    @Test
+    void converts49() {
+        assertEquals(converter.convert(49), "XLIX");
+    }
+
+    @Test
+    void converts50() {
+        assertEquals(converter.convert(50), "L");
+    }
 }

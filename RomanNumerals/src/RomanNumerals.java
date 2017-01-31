@@ -4,9 +4,19 @@ public class RomanNumerals {
 
         String roman = "";
 
+        if(arabic >= 50){
+            arabic -= 50;
+            roman += "L";
+        }
+
+        if(arabic >= 40){
+            arabic -= 40;
+            roman += "XL";
+        }
+
         if(arabic > 10 || arabic == 10) {
             arabic -= 10;
-            roman = "X";
+            roman += "X";
         }
 
         if(arabic == 9) {
