@@ -14,7 +14,7 @@ public class RomanNumerals {
             roman += "XL";
         }
 
-        if(arabic > 10 || arabic == 10) {
+        if(arabic >= 10) {
             arabic -= 10;
             roman += "X";
         }
@@ -24,7 +24,7 @@ public class RomanNumerals {
             roman += "IX";
         }
 
-        if(arabic > 5 || arabic == 5) {
+        if(arabic >= 5) {
             arabic -= 5;
             roman = "V";
         }
