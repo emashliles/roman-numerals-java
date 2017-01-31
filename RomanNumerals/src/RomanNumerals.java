@@ -6,6 +6,7 @@ public class RomanNumerals {
 
     public RomanNumerals() {
         this.numerals = new HashMap<>();
+
         numerals.put(1, "I");
         numerals.put(4, "IV");
         numerals.put(5, "V");
@@ -19,12 +20,12 @@ public class RomanNumerals {
 
         String roman = "";
 
-        if(arabic >= 50){
+        if(arabic >= 50) {
             arabic -= 50;
             roman += numerals.get(50);
         }
 
-        if(arabic >= 40){
+        if(arabic >= 40) {
             arabic -= 40;
             roman += numerals.get(40);
         }
