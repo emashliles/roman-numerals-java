@@ -4,6 +4,12 @@ public class RomanNumerals {
 
         String roman = "";
 
+        if(i == 10)
+            return "X";
+
+        if(i == 9)
+            return "IX";
+
         if(i > 5) {
             i -= 5;
             roman = "V";
