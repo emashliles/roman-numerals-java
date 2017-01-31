@@ -1,27 +1,27 @@
 public class RomanNumerals {
 
-    public String convert(int i) {
+    public String convert(int arabic) {
 
         String roman = "";
 
-        if(i > 10 || i == 10) {
-            i -= 10;
+        if(arabic > 10 || arabic == 10) {
+            arabic -= 10;
             roman = "X";
         }
 
-        if(i == 9)
+        if(arabic == 9)
             return "IX";
 
-        if(i > 5 || i == 5) {
-            i -= 5;
+        if(arabic > 5 || arabic == 5) {
+            arabic -= 5;
             roman = "V";
         }
 
-        if(i == 4)
+        if(arabic == 4)
             return "IV";
 
-        if(i > 0 && i <= 3)
-            roman = getOnes(i, roman);
+        if(arabic > 0 && arabic <= 3)
+            roman = getOnes(arabic, roman);
 
         return roman;
     }
