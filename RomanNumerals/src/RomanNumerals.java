@@ -4,6 +4,11 @@ public class RomanNumerals {
 
         String roman = "";
 
+        if(i > 10) {
+            i -= 10;
+            roman = "X";
+        }
+
         if(i == 10)
             return "X";
 
