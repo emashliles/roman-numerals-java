@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class RomanNumerals {
 
-    private LinkedHashMap<Integer, String> numerals;
+    private Map<Integer, String> numerals;
 
     public RomanNumerals() {
         this.numerals = new LinkedHashMap<>();
@@ -27,19 +27,16 @@ public class RomanNumerals {
 
         Iterator i = numerals.entrySet().iterator();
 
-       while (i.hasNext()){
-           Map.Entry KeyValuePair = (Map.Entry) i.next();
-           int numeral = (int)KeyValuePair.getKey();
-           String value = (String)KeyValuePair.getValue();
+        for (Map.Entry KeyValuePair: numerals.entrySet()) {
 
-           if(arabic >= numeral) {
-               roman += value;
-               arabic -= numeral;
-           }
-       }
+            int numeral = (int) KeyValuePair.getKey();
+            String value = (String) KeyValuePair.getValue();
 
-        if(arabic > 0 && arabic <= 3)
-            roman = getOnes(arabic, roman);
+            while (arabic >= numeral) {
+                roman += value;
+                arabic -= numeral;
+            }
+        }
 
         return roman;
     }

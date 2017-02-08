@@ -91,4 +91,9 @@ class RomanNumeralsTest {
     void converts50() {
         assertEquals(converter.convert(50), "L");
     }
+
+    @Test
+    void converts20() {
+        assertEquals(converter.convert(20), "XX");
+    }
 }
